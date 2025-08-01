@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320 70">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#degradado_13);
+      }
+
+      .st1 {
+        fill: url(#degradado_11);
+      }
+
+      .st2 {
+        fill: url(#degradado_1);
+      }
+
+      .st3 {
+        fill: url(#degradado_12);
+      }
+    </style>
+    <linearGradient id="degradado_1" data-name="degradado 1" x1="70" y1="25.6" x2="104.2" y2="25.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ddd"/>
+      <stop offset=".8" stop-color="#a1a1a1"/>
+    </linearGradient>
+    <linearGradient id="degradado_11" data-name="degradado 1" x1="112" x2="136.1" xlink:href="#degradado_1"/>
+    <linearGradient id="degradado_12" data-name="degradado 1" x1="188.3" x2="212.4" xlink:href="#degradado_1"/>
+    <linearGradient id="degradado_13" data-name="degradado 1" x1="215.1" y1="25.5" x2="247.8" y2="25.5" xlink:href="#degradado_1"/>
+  </defs>
+  <path class="st2" d="M77.7.3c3.9,0,7.5.6,10.7,1.9,3.3,1.3,6.1,3.1,8.4,5.3,2.3,2.3,4.2,4.9,5.5,8,1.3,3.1,2,6.4,2,10.1s-.7,6.9-2,10c-1.3,3.1-3.1,5.8-5.5,8-2.3,2.3-5.1,4.1-8.4,5.4s-6.8,2-10.7,2h-7.7V.3h7.7ZM77.7,46.8c3.3,0,6.2-.5,8.9-1.6,2.7-1.1,4.9-2.6,6.8-4.5s3.3-4.1,4.3-6.7c1-2.6,1.5-5.3,1.5-8.3s-.5-5.9-1.5-8.4c-1-2.6-2.5-4.8-4.3-6.7-1.9-1.9-4.1-3.4-6.8-4.4-2.7-1.1-5.6-1.6-8.9-1.6h-3v42.3h3Z"/>
+  <path class="st1" d="M112,.3h24.1v4.2h-19.5v18.6h19.5v4.2h-19.5v19.5h19.5v4.2h-24.1V.3Z"/>
+  <path class="st3" d="M188.3.3h4.6v46.4h19.5v4.2h-24.1V.3Z"/>
+  <path class="st0" d="M233,0l14.8,50.9h-4.8l-4.2-14.8h-15l-4.1,14.8h-4.5L230,0h3ZM224.9,31.9h12.7l-6.4-22.9-6.4,22.9Z"/>
+</svg>
