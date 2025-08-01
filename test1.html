@@ -170,11 +170,11 @@
                         touch-action="pan-y" auto-rotate src="assets/3d/camisa.glb" poster="assets/3d/poster.webp" shadow-intensity="1">
                     </model-viewer> -->
 
-                    <model-viewer disable-pan disable-tap loading="auto" reveal="auto" touch-action="pan-y" auto-rotate src="assets/3d/chaqueta.glb"
-                        poster="assets/3d/poster_chaqueta.webp" shadow-intensity="1">
+                    <model-viewer src="assets/3d/chaqueta.glb" poster="assets/3d/poster_chaqueta.webp" shadow-intensity="1" ar
+                        camera-controls touch-action="pan-y" alt="A 3D model carousel">
 
                         <button slot="ar-button" id="ar-button">
-                            Ver en realidad aumentada
+                            View in your space
                         </button>
 
                         <div id="ar-prompt">
@@ -182,17 +182,17 @@
                         </div>
 
                         <button id="ar-failure">
-                            Ar no esta rastreando!
+                            AR is not tracking!
                         </button>
 
                         <div class="slider">
                             <div class="slides">
-                                <button class="slide selected" onclick="switchSrc(this, 'chaqueta')"
+                                <button class="slide" onclick="switchSrc(this, 'chaqueta')"
                                     style="background-image: url('assets/3d/poster_chaqueta.webp');">
                                 </button>
-                                <button class="slide" onclick="switchSrc(this, 'camisa')"
+                                <button class="slide selected" onclick="switchSrc(this, 'camisa')"
                                     style="background-image: url('assets/3d/poster.webp');">
-                                </button>
+                                </button>                                
                                 <!-- <button class="slide" onclick="switchSrc(this, 'GeoPlanter')"
                                     style="background-image: url('../../assets/ShopifyModels/GeoPlanter.webp');">
                                 </button>
@@ -230,7 +230,7 @@
                         }
 
                         model-viewer {
-                            background-color: #1d1d1d;
+                            background-color: #242424;
                             overflow-x: hidden;
                         }
 
