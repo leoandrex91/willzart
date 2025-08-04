@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <link rel="canonical" href="https://willzart.netlify.app/">
-    <title>WILLZART</title>
+    <title>Records - WILLZART</title>
     <meta name="description"
-        content="WILLZART es una marca de ropa colombiana, 100% artesanal, que combina estilo, elegancia y simplicidad. Diseños únicos hechos a mano, destacando lo mejor de la moda sostenible y auténtica.">
+        content="En WILLZART celebramos la grandeza del deporte con el mismo detalle y pasión con los que creamos cada prenda. Nuestra línea de ropa deportiva 100% artesanal —hecha en Colombia con manos expertas— viste a los atletas que rompen límites, inspiran a otros y dejan huella.">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/manifest/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/manifest/favicon-16x16.png">
@@ -23,13 +23,13 @@
     <meta property="og:url" content="https://willzart.netlify.app/">
     <meta property="og:title" content="WILLZART">
     <meta property="og:description"
-        content="WILLZART es una marca de ropa colombiana, 100% artesanal, que combina estilo, elegancia y simplicidad. Diseños únicos hechos a mano, destacando lo mejor de la moda sostenible y auténtica.">
-    <meta property="og:image" content="https://willzart.netlify.app/assets/manifest/og.png">
+        content="En WILLZART celebramos la grandeza del deporte con el mismo detalle y pasión con los que creamos cada prenda. Nuestra línea de ropa deportiva 100% artesanal —hecha en Colombia con manos expertas— viste a los atletas que rompen límites, inspiran a otros y dejan huella.">
+    <meta property="og:image" content="https://willzart.netlify.app/assets/manifest/og_sport.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WILLZART">
     <meta name="twitter:description"
-        content="WILLZART es una marca de ropa colombiana, 100% artesanal, que combina estilo, elegancia y simplicidad. Diseños únicos hechos a mano, destacando lo mejor de la moda sostenible y auténtica.">
-    <meta name="twitter:image" content="https://willzart.netlify.app/assets/manifest/og.png">
+        content="En WILLZART celebramos la grandeza del deporte con el mismo detalle y pasión con los que creamos cada prenda. Nuestra línea de ropa deportiva 100% artesanal —hecha en Colombia con manos expertas— viste a los atletas que rompen límites, inspiran a otros y dejan huella.">
+    <meta name="twitter:image" content="https://willzart.netlify.app/assets/manifest/og_sport.png">
     <meta name="keywords"
         content="WILLZART, ropa artesanal, moda colombiana, estilo elegante, simplicidad, moda sostenible, ropa hecha a mano, diseño exclusivo, ropa ecológica, ropa auténtica, diseño colombiano, moda artesanal, moda de lujo, ropa minimalista, elegancia artesanal, moda consciente">
     <meta name="format-detection" content="telephone=no">
@@ -870,59 +870,7 @@
                 })
             })()
     </script>
-    <script>
-        var LOCALES = {
-            'errors': {
-                'email': 'Por favor, ingrese una dirección de correo válida',
-                'required': 'Este campo es obligatorio',
-                'tel': 'Por favor, ingrese un número de teléfono válido',
-                'minlength': 'Por favor, ingrese al menos {0} caracteres',
-
-                'generic': 'Error de conexión, por favor intente de nuevo',
-                'genericCode': 'Ocurrió un error, por favor intente de nuevo',
-
-                // Las contraseñas no coinciden
-                'equalTo': 'Las contraseñas no coinciden'
-            }
-        };
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carousel = document.querySelector(".carousel");
-            const cursorContainer = document.querySelector(".cursor");
-
-            if (!carousel || !cursorContainer) return;
-
-            document.addEventListener("mousemove", function (e) {
-                const y = e.clientY;
-
-                // Verifica si el cursor está en el carrusel y por debajo del header
-                const inCarousel = carousel.contains(document.elementFromPoint(e.clientX, e.clientY));
-                const belowHeader = y > 90;
-
-                if (inCarousel && belowHeader) {
-                    cursorContainer.classList.remove("is-invisible");
-                } else {
-                    cursorContainer.classList.add("is-invisible");
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.querySelector(".carousel__list__inner");
-
-            document.querySelector(".js-carousel-next-mobile")?.addEventListener("click", () => {
-                container.scrollBy({ left: 300, behavior: "smooth" });
-            });
-
-            document.querySelector(".js-carousel-prev-mobile")?.addEventListener("click", () => {
-                container.scrollBy({ left: -300, behavior: "smooth" });
-            });
-        });
-    </script>
-
+    
     <script fetchpriority="low" src="/assets/javascripts/script.js"></script>
     <script fetchpriority="low" src="/assets/javascripts/inicio.js"></script>
 </body>
