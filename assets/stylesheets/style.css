@@ -630,7 +630,7 @@ h1 {
 h1 {
   font-family: LemonMilkLight;
   font-weight: lighter;
-  font-size: var(--xxxxl, calc(var(--scale-text-rem) * 35.5)) var(--n-xxxxl, var(--xxl, calc(var(--scale-text-rem) * 25.7)) var(--n-xxl, var(--md, calc(var(--scale-text-rem) * 12)) var(--n-md, calc(var(--scale-text-rem) * 6.5))));
+  font-size: var(--xxxxl, calc(var(--scale-text-rem) * 32)) var(--n-xxxxl, var(--xxl, calc(var(--scale-text-rem) * 23)) var(--n-xxl, var(--md, calc(var(--scale-text-rem) * 12)) var(--n-md, calc(var(--scale-text-rem) * 6.5))));
   --lh: var(--xxxxl, 1.11831em) var(--n-xxxxl, var(--xxl, 1.01167em) var(--n-xxl, var(--md, 0.93567em) var(--n-md, 1.05882em)));
   line-height: var(--lh);
   letter-spacing: var(--xxl, -.02em) var(--n-xxl, var(--md, -.03em) var(--n-md, 0));
@@ -4789,6 +4789,11 @@ input:checked+.btn--link-reverse:is(label):after {
   height: auto;
   border-radius: 0;
   overflow: visible
+}
+
+.menu_text_mini {
+  display: block;
+  padding: calc(var(--scale-px) * 5) 0;
 }
 
 .btn--link:where(:not(.btn--full)) {
@@ -18498,7 +18503,6 @@ video.background--cover {
   .mobile-scrollable {
     display: flex;
     flex-wrap: nowrap;
-    gap: var(--spacing);
     padding: 0 0 0 calc(var(--spacing));
     width: 100%;
     overflow-x: scroll;
@@ -18533,7 +18537,7 @@ video.background--cover {
   }
 
   .mobile-scrollable.mobile-scrollable--center {
-    padding: 0 0 0 calc(var(--spacing) * 3)
+    padding: 0
   }
 
   .mobile-scrollable.mobile-scrollable--center:after {
@@ -19201,7 +19205,10 @@ label.error {
 }
 
 .header__logo {
-  display: inline-block
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .header--lower .header__content {
@@ -19918,4 +19925,41 @@ model-viewer {
 
 .shw-s {
   text-shadow: 0 0 8px black;
+}
+
+.menu-links {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 calc(var(--scale-px) * 20);
+}
+
+.menu-links a {
+  padding: 5px calc(var(--scale-px) * 10);
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: gray;
+  transition: width 0.2s ease;
+}
+
+.menu-links a:hover {
+  color: gray;
+}
+
+.menu-links a:hover::after {
+  width: 100%;
 }

@@ -1,7 +1,7 @@
 {
-    "name": "WILLZUR",
-    "short_name": "WILLZUR",
-    "description": "WILLZUR - Moda artesanal colombiana con estilo, elegancia y simplicidad.",
+    "name": "Willzart",
+    "short_name": "Willzart",
+    "description": "Willzart - Moda artesanal colombiana con estilo, elegancia y simplicidad.",
     "start_url": "/",
     "lang": "es",
     "display": "standalone",
@@ -33,7 +33,7 @@
         },
         {
             "src": "favicon-16x16.png",
-            "sizes": "16x316",
+            "sizes": "16x16",
             "type": "image/png"
         },
         {
@@ -43,13 +43,13 @@
         }
     ],
     "screenshots": [
-    {
-      "src": "splash-640x1136.png",
-      "sizes": "640x1136"
-    },
-    {
-      "src": "splash-750x1334.png",
-      "sizes": "750x1334"
-    }
-  ]
+        {
+            "src": "splash-640x1136.png",
+            "sizes": "640x1136"
+        },
+        {
+            "src": "splash-750x1334.png",
+            "sizes": "750x1334"
+        }
+    ]
 }
