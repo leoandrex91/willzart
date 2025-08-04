@@ -19963,3 +19963,33 @@ model-viewer {
 .menu-links a:hover::after {
   width: 100%;
 }
+
+.video-square {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-square video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.responsive-video-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.responsive-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
