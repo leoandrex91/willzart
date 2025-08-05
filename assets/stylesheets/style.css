@@ -17879,14 +17879,14 @@ body {
 }
 
 .carousel--image-move:not(.carousel--md-up) picture {
-  width: 119.356%
+  width: 100%
 }
 
 @media (min-width:568px) and (max-aspect-ratio:13/9),
 (min-width:668px) and (min-height:416px),
 (min-width:980px) {
   .carousel--image-move.carousel--md-up picture {
-    width: 119.356%
+    width: 100%
   }
 }
 
