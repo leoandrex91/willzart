@@ -19993,3 +19993,9 @@ model-viewer {
   display: block;
   border-radius: 8px;
 }
+
+@media (max-width: 767px) {
+  .svg_404 {
+    padding-top: 40vh;
+  }
+}
