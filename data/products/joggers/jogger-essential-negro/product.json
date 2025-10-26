@@ -4,10 +4,10 @@
     "category": "Casual",
     "gender": "hombre",
     "is_sport": true,
-    "price": 320000,
-    "discount_price": 279900,
+    "price": 179900,
+    "discount_price": 179900,
     "is_new": true,
-    "is_featured": true,
+    "is_featured": false,
     "is_offer": false,
     "currency": "COP",
     "materials": [

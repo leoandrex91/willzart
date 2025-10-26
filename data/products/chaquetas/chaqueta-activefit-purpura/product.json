@@ -4,10 +4,10 @@
     "category": "Deportiva",
     "gender": "mujer",
     "is_sport": true,
-    "price": 480000,
-    "discount_price": 50000,
+    "price": 219900,
+    "discount_price": 199000,
     "is_new": true,
-    "is_featured": false,
+    "is_featured": true,
     "is_offer": true,
     "currency": "COP",
     "materials": [
