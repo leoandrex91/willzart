@@ -341,7 +341,7 @@ function getImagePath(p, imageName) {
     const body = document.getElementById('filtersBody');
     if (!filters || !toggle || !body) return;
 
-    
+
 
     const isMobile = () => window.matchMedia('(max-width: 767.98px)').matches;
 
@@ -349,18 +349,18 @@ function getImagePath(p, imageName) {
         filters.dataset.open = open ? 'true' : 'false';
         toggle.setAttribute('aria-expanded', String(open));
 
-        if (isMobile()) {            
+        if (isMobile()) {
             if (open) {
                 // 2) Resetea para calcular altura real
                 body.style.maxHeight = 'none';
                 // 3) Mide y aplica con un pequeño buffer para márgenes/bordes
-                const target = body.scrollHeight + 2; // px extra evita cortes
+                const target = body.scrollHeight + 30; // px extra evita cortes
                 // 4) Prepara la animación desde 0
                 body.style.maxHeight = '0px';
                 requestAnimationFrame(() => { body.style.maxHeight = target + 'px'; });
             } else {
                 // Cierre: anima desde altura actual a 0
-                const current = body.scrollHeight + 2;
+                const current = body.scrollHeight + 30;
                 body.style.maxHeight = current + 'px';
                 requestAnimationFrame(() => { body.style.maxHeight = '0px'; });
 
@@ -387,13 +387,4 @@ function getImagePath(p, imageName) {
     }
     window.addEventListener('resize', applyByViewport);
     applyByViewport();
-
-    // Cerrar si se hace tap fuera (sólo móvil)
-    document.addEventListener('click', (e) => {
-        if (!isMobile()) return;
-        const open = filters.dataset.open === 'true';
-        if (open && !filters.contains(e.target)) {
-            setOpen(false);
-        }
-    });
 })();
