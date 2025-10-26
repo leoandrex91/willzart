@@ -201,6 +201,7 @@
 
         // Cambiar el título del navegador dinámicamente
         document.title = `${prod.name} | WILLZART`;
+        document.querySelector('meta[name="description"]')?.setAttribute('content', `${prod.detail}`);
 
         document.querySelector('meta[property="og:title"]')?.setAttribute('content', `${prod.name} | WILLZART`);
         document.querySelector('meta[property="og:description"]')?.setAttribute('content', `${prod.detail}`);
