@@ -267,7 +267,7 @@
         $thumbs.innerHTML = fullPaths
             .map(
                 (src, i) =>
-                    `<button type="button" aria-current="${i === 0}"><img src="${src}" alt="Vista ${i + 1}" onerror="this.onerror=null; this.src='/assets/images/no-image.webp';"></button>`
+                    `<button type="button" aria-current="${i === 0}"><img src="${src}" alt="Vista ${i + 1}" onerror="this.src='/assets/images/no-image.webp';"></button>`
             )
             .join("");
         Array.from($thumbs.children).forEach((btn, i) => btn.addEventListener("click", () => setImage(i)));

@@ -1,5 +1,5 @@
 {
-    "id": "2001",
+    "id": "2002",
     "name": "Jogger Essential Negro",
     "category": "Casual",
     "gender": "hombre",
@@ -33,7 +33,9 @@
         "Estilo urbano"
     ],
     "images": [
-        "1.jpg"
+        "1.webp",
+        "2.webp",
+        "3.webp"
     ],
     "detail": "Jogger Essential diseñado para máxima comodidad y estilo urbano. Fabricado en algodón premium y poliéster elástico que se adapta al movimiento. Pretina ajustable con cordón y puños elásticos. Ideal para entrenar, salir o disfrutar de un look relajado con un toque moderno."
 }

@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ${badges}
         </div>
         <a href="product.html?productid=${encodeURIComponent(p.id)}" class="image-wrapper">
-          <img src="${images[0] || '/assets/images/no-image.webp'}" alt="${p.name}" class="fade-image" onerror="this.onerror=null; this.src='/assets/images/no-image.webp';">
+          <img src="${images[0] || '/assets/images/no-image.webp'}" alt="${p.name}" class="fade-image" onerror="this.src='/assets/images/no-image.webp';">
         </a>
       </div>
       <div class="product-card__body">
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Función animada para cambiar imagen
       function changeImage(newSrc) {
         imgTag.classList.remove("fade-in", "fade-out");
-        void imgTag.offsetWidth; // reinicia animación
+        void imgTag.offsetWidth;
         imgTag.classList.add("fade-out");
 
         setTimeout(() => {
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       // Click en color → cambia imagen con animación
-      colorDots.forEach((dot, idx) => {
+      /* colorDots.forEach((dot, idx) => {
         dot.addEventListener("click", e => {
           e.stopPropagation();
           if (images[idx]) {
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
             changeImage(images[idx]);
           }
         });
-      });
+      }); */
 
       // Rotación automática con animación
       if (images.length > 1) {

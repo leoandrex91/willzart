@@ -214,7 +214,7 @@ function mostrarProductos(productos) {
             ${badges}
           </div>
           <div class="product-image-container">
-            <img src="${getImagePath(p, p.images[0])}" class="card-img-top" alt="${p.name}" onerror="this.onerror=null; this.src='/assets/images/no-image.webp';">
+            <img src="${getImagePath(p, p.images[0])}" class="card-img-top" alt="${p.name}" onerror="this.src='/assets/images/no-image.webp';">
           </div>
           <div class="card-body">
             <h6 class="fw-bold mb-1">${p.name}</h6>
