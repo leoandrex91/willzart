@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       preloader.classList.remove("active");
       preloader.classList.add("fade-out");
-    }, 400); // un pequeño delay para que se vea la entrada
+    }, 1000);
   });
 
   // --- Al hacer click en enlaces internos (fade in) ---
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         window.location.href = url;
-      }, 600); // espera a que la animación se vea
+      }, 1000);
     });
   });
 });
