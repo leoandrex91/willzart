@@ -1,0 +1,40 @@
+{
+    "id": "1001",
+    "name": "Buso Oversize Blanco",
+    "category": "Casual",
+    "gender": "mujer",
+    "is_sport": false,
+    "price": 500000,
+    "discount_price": 430000,
+    "is_new": true,
+    "is_featured": true,
+    "is_offer": true,
+    "currency": "COP",
+    "materials": [
+        "Algodón premium",
+        "Poliéster suave"
+    ],
+    "colors": [
+        {
+            "name": "Blanco con interior púrpura",
+            "hex": "#FFFFFF",
+            "hex1": "#5C3A8E"
+        }
+    ],
+    "sizes": [
+        "S",
+        "M",
+        "L"
+    ],
+    "tags": [
+        "Oversize",
+        "Casual",
+        "Comodidad",
+        "Capota",
+        "Moda urbana"
+    ],
+    "images": [
+        "1.png"
+    ],
+    "detail": "Buso oversize con interior de color. Confeccionado en algodón premium y poliéster suave para brindar comodidad y calidez. Incluye bolsillo frontal tipo canguro y cordones ajustables. Ideal para outfits casuales, días fríos o un estilo relajado con toques modernos."
+}

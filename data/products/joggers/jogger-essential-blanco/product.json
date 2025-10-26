@@ -1,0 +1,39 @@
+{
+    "id": "2001",
+    "name": "Jogger Essential Blanco",
+    "category": "Casual",
+    "gender": "hombre",
+    "is_sport": true,
+    "price": 320000,
+    "discount_price": 279900,
+    "is_new": true,
+    "is_featured": true,
+    "is_offer": false,
+    "currency": "COP",
+    "materials": [
+        "Algodón premium",
+        "Poliéster elástico"
+    ],
+    "colors": [
+        {
+            "name": "Blanco",
+            "hex": "#FFFFFF"
+        }
+    ],
+    "sizes": [
+        "S",
+        "M",
+        "L"
+    ],
+    "tags": [
+        "Jogger",
+        "Sportwear",
+        "Casual",
+        "Comodidad",
+        "Estilo urbano"
+    ],
+    "images": [
+        "1.png"
+    ],
+    "detail": "Jogger Essential diseñado para máxima comodidad y estilo urbano. Fabricado en algodón premium y poliéster elástico que se adapta al movimiento. Pretina ajustable con cordón y puños elásticos. Ideal para entrenar, salir o disfrutar de un look relajado con un toque moderno."
+}

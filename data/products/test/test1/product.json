@@ -1,0 +1,35 @@
+{
+    "id": "9991",
+    "name": "Test Product 1",
+    "category": "test",
+    "gender": "mujer",
+    "is_sport": false,
+    "price": 1234567,
+    "discount_price": 100,
+    "is_new": true,
+    "is_featured": false,
+    "is_offer": true,
+    "currency": "COP",
+    "materials": [
+        "Tela",
+        "Textil"
+    ],
+    "colors": [
+        {
+            "name": "Gris",
+            "hex": "#8f8f8f"
+        }
+    ],
+    "sizes": [
+        "S",
+        "M",
+        "L"
+    ],
+    "tags": [
+        "Moderno"
+    ],
+    "images": [
+        "/data/products/test/test1/images/1.webp"
+    ],
+    "detail": "Buso de algodón con capota y bolsillo frontal tipo canguro. Ideal para climas frios y dias de descanso."
+}

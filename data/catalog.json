@@ -1,0 +1,46 @@
+{
+    "categories": [
+        {
+            "id": "busos",
+            "label": "Busos",
+            "products": [
+                {
+                    "id": 1001,
+                    "src": "buso-oversize-blanco"
+                },
+                {
+                    "id": 1002,
+                    "src": "buso-oversize-negro"
+                }
+            ]
+        },
+        {
+            "id": "joggers",
+            "label": "Joggers",
+            "products": [
+                {
+                    "id": 2001,
+                    "src": "jogger-essential-blanco"
+                },
+                {
+                    "id": 2002,
+                    "src": "jogger-essential-negro"
+                }
+            ]
+        },
+        {
+            "id": "chaquetas",
+            "label": "Chaquetas",
+            "products": [
+                {
+                    "id": 3001,
+                    "src": "chaqueta-activefit-roja"
+                },
+                {
+                    "id": 3002,
+                    "src": "chaqueta-activefit-purpura"
+                }
+            ]
+        }
+    ]
+}

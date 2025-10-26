@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="canonical" href="https://willzart.netlify.app/">
+  <title>Catalogo de Productos | WILLZART</title>
+  <meta name="description"
+    content="WILLZART es una marca de ropa colombiana, 100% artesanal, que combina estilo, elegancia y simplicidad. Diseños únicos hechos a mano, destacando lo mejor de la moda sostenible y auténtica.">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/manifest/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/manifest/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/manifest/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/manifest/safari-pinned-tab.svg" color="#0f0f0f">
+  <link rel="manifest" href="/assets/manifest/manifest.webmanifest">
+  <meta name="theme-color" content="#000000" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="msapplication-config" content="/assets/manifest/browserconfig.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willzart.netlify.app/">
+  <meta property="og:title" content="WILLZART">
+  <meta property="og:description"
+    content="WILLZART es una marca de ropa colombiana, 100% artesanal, que combina estilo, elegancia y simplicidad. Diseños únicos hechos a mano, destacando lo mejor de la moda sostenible y auténtica.">
+  <meta property="og:image" content="https://willzart.netlify.app/assets/manifest/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WILLZART">
+  <meta name="twitter:description"
+    content="WILLZART es una marca de ropa colombiana, 100% artesanal, que combina estilo, elegancia y simplicidad. Diseños únicos hechos a mano, destacando lo mejor de la moda sostenible y auténtica.">
+  <meta name="twitter:image" content="https://willzart.netlify.app/assets/manifest/og.png">
+  <meta name="keywords"
+    content="WILLZART, ropa artesanal, moda colombiana, estilo elegante, simplicidad, moda sostenible, ropa hecha a mano, diseño exclusivo, ropa ecológica, ropa auténtica, diseño colombiano, moda artesanal, moda de lujo, ropa minimalista, elegancia artesanal, moda consciente">
+  <meta name="format-detection" content="telephone=no">
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/catalogo.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="preloader" class="active">
+    <div class="loader-content"></div>
+  </div>
+
+  <main class="bg-light">
+    <section class="bg-light text-dark">
+      <div class="container-fluid pt-5 pb-5 pe-5 ps-5">
+        <div class="row pt-5">
+          <div class="pb-3">
+            <h2 id="products-title">Catalogo de Productos</h2>
+          </div>
+
+          <!-- ==== Filtros ==== -->
+          <aside class="col-lg-3 col-md-4 col-12 mb-4">
+            <!-- data-open controla el estado del acordeón en móvil -->
+            <div class="filters bg-light rounded shadow-sm" id="filters" data-open="false">
+
+              <!-- Botón solo visible en móvil -->
+              <button class="filters__toggle btn btn-dark w-100 d-md-none" id="filtersToggle" aria-expanded="false"
+                aria-controls="filtersBody">
+                Filtrar por
+                <span class="filters__chev ms-2" aria-hidden="true"></span>
+              </button>
+
+              <!-- Contenido colapsable -->
+              <div class="filters__body" id="filtersBody">
+                <h5 class="mb-3 d-none d-md-block">Filtrar por</h5>
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Categoría</label>
+                  <select id="filterCategoria" class="form-select">
+                    <option value="">Todas</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="filterNuevo">
+                    <label class="form-check-label" for="filterNuevo">Nuevo</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="filterDestacado">
+                    <label class="form-check-label" for="filterDestacado">Destacado</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="filterOferta">
+                    <label class="form-check-label" for="filterOferta">Oferta</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold d-block">Género / Estilo</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="filterHombre">
+                    <label class="form-check-label" for="filterHombre">Hombre</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="filterMujer">
+                    <label class="form-check-label" for="filterMujer">Mujer</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="filterUnisex">
+                    <label class="form-check-label" for="filterUnisex">Unisex</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="filterDeportiva">
+                    <label class="form-check-label" for="filterDeportiva">Deportiva</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Talla</label>
+                  <div id="filterTallas" class="d-flex flex-wrap gap-2">
+                    <!-- tallas dinámicas -->
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Color</label>
+                  <div id="filterColores" class="d-flex flex-wrap gap-2">
+                    <!-- colores dinámicos -->
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Precio máximo</label>
+                  <input type="range" class="form-range" min="0" step="50000" id="filterPrecio">
+                  <div class="text-end"><span id="precioValor">$0</span></div>
+                </div>
+
+                <button id="btnLimpiarFiltros" class="btn btn-outline-secondary w-100 mt-2">Limpiar filtros</button>
+              </div>
+            </div>
+          </aside>
+
+
+          <!-- ==== Productos ==== -->
+          <section class="col-lg-9 col-md-8 col-12">
+            <div id="productosContainer" class="row g-4"></div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/catalogo.js"></script>
+</body>
+
+</html>

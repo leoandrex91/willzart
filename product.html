@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <link rel="canonical" href="https://willzart.netlify.app/">
-  <title>WILLZART</title>
+  <title>Producto | WILLZART</title>
   <meta name="description"
     content="WILLZART es una marca de ropa colombiana, 100% artesanal, que combina estilo, elegancia y simplicidad. Diseños únicos hechos a mano, destacando lo mejor de la moda sostenible y auténtica.">
   <link rel="shortcut icon" href="/favicon.ico">
@@ -35,6 +35,7 @@
   <meta name="format-detection" content="telephone=no">
   <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/product.css" rel="stylesheet" />
   <link href="assets/css/bootstrap-icons.css" rel="stylesheet" />
 </head>
 
@@ -43,61 +44,79 @@
     <div class="loader-content"></div>
   </div>
 
-  <main>
-    <section id="home-carrousel" class="carousel slide" data-bs-ride="carousel" aria-label="Slider Home"
-      data-bs-theme="light">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/images/media/nosotros/banner/background@xxl.webp" class="d-block w-100" alt="Nueva Colección">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="fw-bold">Nueva Colección</h2>
-            <p>Descubre nuestras nueva colección.</p>
-            <a href="catalogo.html" class="btn btn-primary hero-btn">Ver colección</a>
+  <main class="bg-light">
+    <section class="product-page bg-light text-dark" id="product-app">
+      <div class="breadcrumbs" id="prd-bc"></div>
+      <div class="detail" id="prd-detail" hidden>
+        <!-- Galería -->
+        <section class="gallery">
+          <div class="viewer" id="prd-viewer" aria-label="Visor de imágenes">
+            <img id="prd-viewer-img" alt="" onerror="this.onerror=null; this.src='/assets/images/no-image.webp';">
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/media/home/intro/image-1@xxl.webp" class="d-block w-100" alt="Línea deportiva">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="fw-bold">Línea deportiva</h2>
-            <p>Rendimiento y estilo en cada movimiento.</p>
-            <a href="catalogo.html?deportiva=1" class="btn btn-primary hero-btn">Línea deportiva</a>
+          <div class="thumbs" id="prd-thumbs"></div>
+        </section>
+
+        <!-- Información -->
+        <section class="info">
+          <h1 id="prd-name"></h1>
+          <div class="price" id="prd-price"></div>
+          <div id="prd-badges" class="mb-2"></div>
+          <div class="tagline" id="prd-tag"></div>
+
+          <div class="meta">
+            <div class="kv"><span class="k">Colores:</span>
+              <div class="chips" id="prd-colors"></div>
+            </div>
+            <div class="kv"><span class="k">Tallas:</span>
+              <div class="chips" id="prd-sizes"></div>
+            </div>
+            <div class="kv"><span class="k">Materiales:</span>
+              <div class="chips" id="prd-materials"></div>
+            </div>
+            <div class="kv"><span class="k">Etiquetas:</span>
+              <div class="chips" id="prd-tags"></div>
+            </div>
           </div>
-        </div>
+
+          <div class="specs">
+            <h2>Especificaciones</h2>
+            <ul id="prd-specs"></ul>
+          </div>
+
+          <div class="backline">
+            <button onclick="window.location.href='catalogo.html'" class="btn btn-secondary rounded-pill px-3"
+              type="button">Volver a Catálogo</button>
+            <button id="btnIrPagina" class="btn btn-success rounded-pill px-3" type="button">
+              <i class="bi bi-cart"></i> Cómo Comprar
+            </button>
+          </div>
+        </section>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#home-carrousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#home-carrousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#home-carrousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="1"></button>
-        <button type="button" data-bs-target="#home-carrousel" data-bs-slide-to="1" aria-label="2"></button>
-        <button type="button" data-bs-target="#home-carrousel" data-bs-slide-to="2" aria-label="3"></button>
+
+      <div id="prd-error" class="alert alert-danger show mt-5" data-bs-theme="light" hidden>
+        No se pudo cargar el producto.
       </div>
     </section>
-
-    <section class="bg-light text-dark">
-      <div class="products" aria-labelledby="products-title">
-        <div class="products__head">
-          <h2 id="products-title">Productos Destacados</h2>
-          <a class="products__more" href="catalogo.html">Ver todos</a>
-        </div>
-        <div class="products__head">
-          <nav class="products__tabs" role="tablist" aria-label="Categorías"></nav>
-        </div>
-
-        <div class="products__carousels"></div>
-      </div>
-    </section>
-
   </main>
-
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/product.js"></script>
+  <script>
+    document.getElementById('btnIrPagina').addEventListener('click', function () {
+      const btn = this;
+
+      btn.innerHTML = `
+      <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+      Cargando...
+    `;
+
+      btn.disabled = true;
+
+      setTimeout(() => {
+        window.location.href = 'comocomprar.html';
+      }, 500);
+    });
+  </script>
 </body>
 
 </html>

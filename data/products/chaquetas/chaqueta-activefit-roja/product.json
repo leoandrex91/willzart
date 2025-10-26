@@ -1,0 +1,40 @@
+{
+    "id": "3001",
+    "name": "Chaqueta ActiveFit Roja",
+    "category": "Deportiva",
+    "gender": "mujer",
+    "is_sport": true,
+    "price": 480000,
+    "discount_price": 429900,
+    "is_new": true,
+    "is_featured": true,
+    "is_offer": true,
+    "currency": "COP",
+    "materials": [
+        "Poliéster técnico impermeable",
+        "Elastano flexible"
+    ],
+    "colors": [
+        {
+            "name": "Rojo intenso",
+            "hex": "#C3414A"
+        }
+    ],
+    "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+    ],
+    "tags": [
+        "Chaqueta deportiva",
+        "Capota",
+        "Impermeable",
+        "Ligera",
+        "Activa"
+    ],
+    "images": [
+        "1.png"
+    ],
+    "detail": "Chaqueta deportiva ActiveFit diseñada para entrenamientos al aire libre y uso urbano. Su tejido técnico impermeable y elástico proporciona protección contra la lluvia y total libertad de movimiento. Incluye cierre completo, bolsillos con cremallera, capota ajustable y pretina adaptable. Ideal para actividades deportivas o un look moderno y funcional."
+}
