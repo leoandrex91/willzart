@@ -524,7 +524,7 @@ blockquote {
 }
 
 .badge-search {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 600;
   border-radius: 0.4rem;
   padding: 0.35rem 0.6rem;
@@ -545,7 +545,7 @@ blockquote {
   background-color: #4caf50;
 }
 
-.badge-agotado {
+.badge-agotado-search {
   background-color: #c71818;
 }
 
@@ -797,39 +797,12 @@ blockquote {
 }
 
 /* ===== RESULTADOS ===== */
-.search-results {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  color: #000;
-  border-radius: 10px;
-  overflow: hidden;
-  max-height: 60vh;
-  overflow-y: auto;
-  display: none;
-  z-index: 9999;
-}
-
 .search-results.visible {
   display: block;
 }
 
-.search-results section {
-  border-top: 1px solid #eee;
-  padding: 10px 12px;
-}
-
 .search-results section:first-child {
   border-top: none;
-}
-
-.search-results h6 {
-  font-size: 0.8rem;
-  color: #666;
-  text-transform: uppercase;
-  margin-bottom: 6px;
 }
 
 .search-results .item {
@@ -855,15 +828,16 @@ blockquote {
 #searchResults {
   position: absolute;
   top: 100%;
+  width: 100%;
   left: 0;
   right: 0;
   background: #fff;
+  color: #000;
   border: 1px solid #ddd;
-  border-radius: 6px;
   max-height: 380px;
   overflow-y: auto;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  z-index: 2000;
+  overflow: hidden;
+  z-index: 9999;
   display: none;
 }
 
@@ -872,6 +846,7 @@ blockquote {
 }
 
 #searchResults section {
+  border-top: 1px solid #eee;
   padding: 6px 12px;
 }
 
@@ -880,6 +855,7 @@ blockquote {
   font-weight: 700;
   margin: 8px 0 4px;
   color: #555;
+  text-transform: uppercase;
 }
 
 #searchResults .item:hover,
