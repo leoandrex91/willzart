@@ -187,8 +187,30 @@
         // Información principal
         $pName.textContent = prod.name;
 
+        /* function updateMeta(name, content, property = false) {
+            const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+            let meta = document.querySelector(selector);
+            if (!meta) {
+                meta = document.createElement('meta');
+                if (property) meta.setAttribute('property', name);
+                else meta.setAttribute('name', name);
+                document.head.appendChild(meta);
+            }
+            meta.setAttribute('content', content);
+        } */
+
         // Cambiar el título del navegador dinámicamente
         document.title = `${prod.name} | WILLZART`;
+
+        document.querySelector('meta[property="og:title"]')?.setAttribute('content', `${prod.name} | WILLZART`);
+        document.querySelector('meta[property="og:description"]')?.setAttribute('content', `${prod.detail}`);
+        document.querySelector('meta[property="og:image"]')?.setAttribute('content', `${window.location.origin}${resolved.basePath}/images/${prod.images[0]}`);
+        document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', `${prod.name} | WILLZART`);
+        document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', `${prod.detail}`);
+        document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', `${window.location.origin}${resolved.basePath}/images/${prod.images[0]}`);
+
+        document.querySelector('link[rel="canonical"]')?.setAttribute('href', `${window.location.origin}/product.html?productid=${prod.id}`);
+        document.querySelector('meta[property="og:url"]')?.setAttribute('content', `${window.location.origin}/product.html?productid=${prod.id}`);
 
         // === ETIQUETAS DE PRODUCTO ===
         const $badges = document.getElementById("prd-badges");
