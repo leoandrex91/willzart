@@ -267,7 +267,7 @@ function filtrar(updateUrl = true) {
             (!categoria || p.categoryLabel.toLowerCase() === categoria) &&
             (!talla || p.sizes.includes(talla)) &&
             (!color || p.colors.some(c => c.hex === color)) &&
-            (p.price <= precioMax) &&
+            (p.discount_price <= precioMax) &&
             coincideEtiqueta &&
             coincideGenero &&
             coincideEstilo
