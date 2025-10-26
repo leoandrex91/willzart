@@ -187,18 +187,6 @@
         // Información principal
         $pName.textContent = prod.name;
 
-        /* function updateMeta(name, content, property = false) {
-            const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
-            let meta = document.querySelector(selector);
-            if (!meta) {
-                meta = document.createElement('meta');
-                if (property) meta.setAttribute('property', name);
-                else meta.setAttribute('name', name);
-                document.head.appendChild(meta);
-            }
-            meta.setAttribute('content', content);
-        } */
-
         // Cambiar el título del navegador dinámicamente
         document.title = `${prod.name} | WILLZART`;
         document.querySelector('meta[name="description"]')?.setAttribute('content', `${prod.detail}`);
