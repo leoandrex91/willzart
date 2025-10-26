@@ -9,7 +9,7 @@
     "is_new": true,
     "is_featured": true,
     "is_offer": true,
-    "no_stock": true,
+    "no_stock": false,
     "currency": "COP",
     "materials": [
         "Poliéster técnico impermeable",
