@@ -345,7 +345,7 @@ blockquote {
 
 /* ===== PRODUCTS SECTION ===== */
 .products {
-  padding: 50px 16px 40px;
+  padding: 40px 16px 40px;
   background: #fff;
 }
 
@@ -355,6 +355,12 @@ blockquote {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .products__head {
+    justify-content: center;
+  }
 }
 
 .products__head h2 {
@@ -623,7 +629,7 @@ blockquote {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .product-card {
-    flex-basis: 260px;
+    flex-basis: 88vw;
   }
 }
 
@@ -731,11 +737,11 @@ blockquote {
   }
 
   .search-box .search-icon {
-    padding-top: 1.2rem;
+    padding-top: 1.5rem;
   }
 
   .clear-btn {
-    padding-top: 1.2rem;
+    padding-top: 1.5rem;
   }
 }
 
@@ -754,7 +760,7 @@ blockquote {
 
 .search-box .search-icon {
   position: absolute;
-  top: 45%;
+  top: 40%;
   right: 12px;
   transform: translateY(-50%);
   color: #ffffff;
@@ -762,7 +768,7 @@ blockquote {
 
 .clear-btn {
   position: absolute;
-  top: 45%;
+  top: 40%;
   right: 32px;
   transform: translateY(-50%);
   border: none;
@@ -907,14 +913,15 @@ body.loading #preloader {
   visibility: visible;
 }
 
-.hero-btn{
+.hero-btn {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   border-color: #ffffff;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-.hero-btn:focus, .hero-btn:hover {
+.hero-btn:focus,
+.hero-btn:hover {
   background-color: #000000;
   border-color: #ffffff;
 }

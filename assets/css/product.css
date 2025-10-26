@@ -196,6 +196,16 @@
     margin-top: 24px;
 }
 
+@media (max-width: 767.98px) {
+    .backline {
+        text-align: center;
+    }
+
+    .kv .k {
+        width: auto;
+    }
+}
+
 .backline a {
     text-decoration: none;
     border-bottom: 2px solid #111;

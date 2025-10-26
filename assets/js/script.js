@@ -218,9 +218,21 @@ document.addEventListener("DOMContentLoaded", () => {
       track.appendChild(card);
     }
 
-    const step = 340;
-    prev.addEventListener("click", () => track.scrollBy({ left: -step, behavior: "smooth" }));
-    next.addEventListener("click", () => track.scrollBy({ left: step, behavior: "smooth" }));
+    function getScrollStep(track) {
+      const firstCard = track.querySelector(".product-card");
+      if (!firstCard) return 340;
+      return firstCard.getBoundingClientRect().width + 18;
+    }
+    
+    prev.addEventListener("click", () => {
+      const step = getScrollStep(track);
+      track.scrollBy({ left: -step, behavior: "smooth" });
+    });
+    next.addEventListener("click", () => {
+      const step = getScrollStep(track);
+      track.scrollBy({ left: step, behavior: "smooth" });
+    });
+
   }
 
   document.querySelectorAll(".products__carousel").forEach((c, i) => c.hidden = i !== 0);

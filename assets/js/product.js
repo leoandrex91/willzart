@@ -127,7 +127,6 @@
 
     const $pName = document.getElementById("prd-name");
     const $pPrice = document.getElementById("prd-price");
-    const $pTag = document.getElementById("prd-tag");
     const $pColors = document.getElementById("prd-colors");
     const $pSizes = document.getElementById("prd-sizes");
     const $pMaterials = document.getElementById("prd-materials");
@@ -190,8 +189,6 @@
 
         // Cambiar el título del navegador dinámicamente
         document.title = `${prod.name} | WILLZART`;
-
-        $pTag.textContent = prod.category;
 
         // === ETIQUETAS DE PRODUCTO ===
         const $badges = document.getElementById("prd-badges");
