@@ -141,7 +141,7 @@ async function initSearch() {
 
                 if (p.no_stock) {
                     const span_agotado = document.createElement("span");
-                    span_agotado.className = "badge-search badge-agotado ms-1";
+                    span_agotado.className = "badge-search bbadge-agotado-search ms-1";
                     span_agotado.textContent = "AGOTADO";
                     div_span.append(span, span_agotado);
                 } else {

@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (p.no_stock) {
           priceHTML = `
           <div class="product-card__price">
-            <span class="badge badge-agotado-search me-1">AGOTADO</span>
+            <span class="badge badge-agotado me-1">AGOTADO</span>
             <span class="text-danger text-decoration-line-through me-2 small">${moneyCOP(p.price)}</span>
             <span class="fw-bold text-primary fs-5">${moneyCOP(p.discount_price)}</span>
           </div>`;
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (p.no_stock) {
           priceHTML = `
           <div class="product-card__price">
-            <span class="badge badge-agotado-search me-1">AGOTADO</span>
+            <span class="badge badge-agotado me-1">AGOTADO</span>
             <span class="fw-bold text-primary text-black fs-5">${moneyCOP(p.price)}</span>
           </div>`;
         } else {
