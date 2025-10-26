@@ -1,0 +1,41 @@
+{
+    "id": "1003",
+    "name": "Buso Cream Zip Crop",
+    "category": "Casual",
+    "gender": "mujer",
+    "is_sport": false,
+    "price": 179900,
+    "discount_price": 159900,
+    "is_new": true,
+    "is_featured": true,
+    "is_offer": true,
+    "currency": "COP",
+    "materials": [
+        "Algodón suave premium",
+        "Poliéster elástico de alto confort"
+    ],
+    "colors": [
+        {
+            "name": "Crema claro",
+            "hex": "#F3EDE2"
+        }
+    ],
+    "sizes": [
+        "S",
+        "M",
+        "L"
+    ],
+    "tags": [
+        "Crop",
+        "Cremallera",
+        "Minimalista",
+        "Cómodo",
+        "Moda urbana"
+    ],
+    "images": [
+        "1.webp",
+        "2.webp",
+        "3.webp"
+    ],
+    "detail": "Buso tipo crop NeoCream Zip Crop diseñado para un estilo moderno y minimalista. Su tejido de algodón suave con mezcla elástica ofrece una textura ligera, tacto agradable y ajuste relajado. Cuenta con cuello alto con cremallera frontal, bolsillo tipo canguro y terminaciones acanaladas que refuerzan su estilo casual urbano. Ideal para uso diario o un look athleisure sofisticado."
+}
