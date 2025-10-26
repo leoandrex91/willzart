@@ -134,10 +134,20 @@ async function initSearch() {
                 img.src = imagePath;
                 img.onerror = () => (img.src = "/assets/images/no-image.webp");
 
+                const div_span = document.createElement("div");
+
                 const span = document.createElement("span");
                 span.textContent = p.name;
 
-                div.append(img, span);
+                if (p.no_stock) {
+                    const span_agotado = document.createElement("span");
+                    span_agotado.className = "badge-search badge-agotado ms-1";
+                    span_agotado.textContent = "AGOTADO";
+                    div_span.append(span, span_agotado);
+                } else {
+                    div_span.append(span);
+                }
+                div.append(img, div_span);
                 section.appendChild(div);
             });
 

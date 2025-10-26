@@ -138,13 +138,13 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="product-card__price">
             <span class="badge badge-agotado me-1">AGOTADO</span>
             <span class="text-danger text-decoration-line-through me-2 small">${moneyCOP(p.price)}</span>
-            <span class="fw-bold text-success">${moneyCOP(p.discount_price)}</span>
+            <span class="fw-bold text-primary fs-5">${moneyCOP(p.discount_price)}</span>
           </div>`;
         } else {
           priceHTML = `
           <div class="product-card__price">
             <span class="text-danger text-decoration-line-through me-2 small">${moneyCOP(p.price)}</span>
-            <span class="fw-bold text-success">${moneyCOP(p.discount_price)}</span>
+            <span class="fw-bold text-primary fs-5">${moneyCOP(p.discount_price)}</span>
           </div>`;
         }
 
@@ -153,12 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
           priceHTML = `
           <div class="product-card__price">
             <span class="badge badge-agotado me-1">AGOTADO</span>
-            <span class="fw-bold text-primary">${moneyCOP(p.price)}</span>
+            <span class="fw-bold text-primary text-black fs-5">${moneyCOP(p.price)}</span>
           </div>`;
         } else {
           priceHTML = `
           <div class="product-card__price">
-            <span class="fw-bold text-primary">${moneyCOP(p.price)}</span>
+            <span class="fw-bold text-primary text-black fs-5">${moneyCOP(p.price)}</span>
           </div>`;
         }
       }

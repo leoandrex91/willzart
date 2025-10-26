@@ -197,13 +197,13 @@ function mostrarProductos(productos) {
         }
 
         // === Calcular precio ===
-        let precioHTML = `<div style="display: flex; align-items: center;"><p class="fw-semibold text-primary mb-0">$${p.price.toLocaleString('es-CO')}</p>`;
+        let precioHTML = `<div style="display: flex; align-items: center;"><p class="fw-semibold text-primary fs-5 mb-0">$${p.price.toLocaleString('es-CO')}</p>`;
         let overlay_img = `product-image-container`;
         if (p.is_offer && p.discount_price) {
             precioHTML = `
         <p class="text-danger text-decoration-line-through mb-0">$${p.price.toLocaleString('es-CO')}</p>
         <div style="display: flex; align-items: center;">
-        <p class="fw-semibold text-primary mb-0">$${p.discount_price.toLocaleString('es-CO')}</p>
+        <p class="fw-semibold text-primary fs-5 mb-0">$${p.discount_price.toLocaleString('es-CO')}</p>
         `;
             if (p.no_stock) {
                 precioHTML += `<span class="badge badge-agotado ms-2">AGOTADO</span>`;
@@ -212,6 +212,7 @@ function mostrarProductos(productos) {
                 overlay_img = `product-image-container`;
             };            
         } else {
+            precioHTML = `<div style="display: flex; align-items: center;"><p class="fw-semibold text-primary text-black fs-5 mb-0">$${p.price.toLocaleString('es-CO')}</p>`;
             if (p.no_stock) {
                 precioHTML += `<span class="badge badge-agotado ms-2">AGOTADO</span>`;
                 overlay_img = `product-image-container show-overlay`;

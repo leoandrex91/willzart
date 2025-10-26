@@ -189,17 +189,12 @@
     }
 }
 
-.text-primary {
-    color: #000000 !important;
-    font-size: 1.3rem;
-}
-
 .product-image-container::before {
     content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(circle,
-            rgba(255, 0, 0, 0) 50%,
+            rgba(255, 0, 0, 0) 60%,
             rgba(255, 0, 0, 0.2) 100%);
     z-index: 2;
     opacity: 0;
