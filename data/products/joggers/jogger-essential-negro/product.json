@@ -9,6 +9,7 @@
     "is_new": true,
     "is_featured": false,
     "is_offer": false,
+    "no_stock": true,
     "currency": "COP",
     "materials": [
         "Algodón premium",

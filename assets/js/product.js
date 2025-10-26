@@ -211,6 +211,7 @@
         if (prod.is_featured) {
             badgesHTML += `<span class="badge badge-destacado me-1">DESTACADO</span>`;
         }
+
         $badges.innerHTML = badgesHTML;
 
 
@@ -221,8 +222,14 @@
         <span class="text-danger text-decoration-line-through me-2">${moneyCOP(prod.price)}</span>
         <span class="fw-bold text-success">${moneyCOP(prod.discount_price)}</span>
         <small class="badge bg-warning-subtle text-dark ms-2">-${descuento}%</small>`;
+            if (prod.no_stock) {
+                $pPrice.innerHTML += `<span class="badge badge-agotado ms-2">AGOTADO</span>`;
+            }
         } else {
             $pPrice.innerHTML = `<span class="fw-bold text-primary">${moneyCOP(prod.price)}</span>`;
+            if (prod.no_stock) {
+                $pPrice.innerHTML += `<span class="badge badge-agotado ms-2">AGOTADO</span>`;
+            }
         }
 
         // Colores (doble color si hex1 existe)

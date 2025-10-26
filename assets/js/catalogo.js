@@ -197,13 +197,29 @@ function mostrarProductos(productos) {
         }
 
         // === Calcular precio ===
-        let precioHTML = `<p class="fw-semibold text-primary mb-0">$${p.price.toLocaleString('es-CO')}</p>`;
+        let precioHTML = `<div style="display: flex; align-items: center;"><p class="fw-semibold text-primary mb-0">$${p.price.toLocaleString('es-CO')}</p>`;
+        let overlay_img = `product-image-container`;
         if (p.is_offer && p.discount_price) {
             precioHTML = `
-        <p class="text-danger text-decoration-line-through mb-1 small">$${p.price.toLocaleString('es-CO')}</p>
+        <p class="text-danger text-decoration-line-through mb-0">$${p.price.toLocaleString('es-CO')}</p>
+        <div style="display: flex; align-items: center;">
         <p class="fw-semibold text-primary mb-0">$${p.discount_price.toLocaleString('es-CO')}</p>
-      `;
+        `;
+            if (p.no_stock) {
+                precioHTML += `<span class="badge badge-agotado ms-2">AGOTADO</span>`;
+                overlay_img = `product-image-container show-overlay`;
+            } else {
+                overlay_img = `product-image-container`;
+            };            
+        } else {
+            if (p.no_stock) {
+                precioHTML += `<span class="badge badge-agotado ms-2">AGOTADO</span>`;
+                overlay_img = `product-image-container show-overlay`;
+            } else {
+                overlay_img = `product-image-container`;
+            };
         }
+        precioHTML += `</div>`;
 
         const url = `product.html?productid=${p.id}`;
 
@@ -213,7 +229,7 @@ function mostrarProductos(productos) {
           <div class="badges-container position-absolute top-0 start-0 p-2 d-flex flex-column">
             ${badges}
           </div>
-          <div class="product-image-container">
+          <div class="${overlay_img}">
             <img src="${getImagePath(p, p.images[0])}" class="card-img-top" alt="${p.name}" onerror="this.src='/assets/images/no-image.webp';">
           </div>
           <div class="card-body">

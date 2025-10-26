@@ -229,6 +229,10 @@
     background-color: #4caf50;
 }
 
+.badge-agotado {
+    background-color: #ce1010;
+}
+
 .badge {
     font-size: 0.9rem;
 }

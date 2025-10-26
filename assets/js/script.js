@@ -133,13 +133,34 @@ document.addEventListener("DOMContentLoaded", () => {
       // Precio
       let priceHTML = "";
       if (p.is_offer && p.discount_price) {
-        priceHTML = `
+        if (p.no_stock) {
+          priceHTML = `
+          <div class="product-card__price">
+            <span class="badge badge-agotado me-1">AGOTADO</span>
+            <span class="text-danger text-decoration-line-through me-2 small">${moneyCOP(p.price)}</span>
+            <span class="fw-bold text-success">${moneyCOP(p.discount_price)}</span>
+          </div>`;
+        } else {
+          priceHTML = `
           <div class="product-card__price">
             <span class="text-danger text-decoration-line-through me-2 small">${moneyCOP(p.price)}</span>
             <span class="fw-bold text-success">${moneyCOP(p.discount_price)}</span>
           </div>`;
+        }
+
       } else {
-        priceHTML = `<div class="product-card__price fw-bold text-primary">${moneyCOP(p.price)}</div>`;
+        if (p.no_stock) {
+          priceHTML = `
+          <div class="product-card__price">
+            <span class="badge badge-agotado me-1">AGOTADO</span>
+            <span class="fw-bold text-primary">${moneyCOP(p.price)}</span>
+          </div>`;
+        } else {
+          priceHTML = `
+          <div class="product-card__price">
+            <span class="fw-bold text-primary">${moneyCOP(p.price)}</span>
+          </div>`;
+        }
       }
 
       // Colores
@@ -154,8 +175,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const card = document.createElement("article");
       card.className = "product-card";
+      let overlay_img = `product-card__media`;
+      if (p.no_stock) {
+        overlay_img = `product-card__media show-overlay`;
+      } else {
+        overlay_img = `product-card__media`;
+      };
       card.innerHTML = `
-      <div class="product-card__media" aria-label="${p.name}">
+      <div class="${overlay_img}" aria-label="${p.name}">
         <div class="badges-container">
           ${badges}
         </div>
@@ -223,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!firstCard) return 340;
       return firstCard.getBoundingClientRect().width + 18;
     }
-    
+
     prev.addEventListener("click", () => {
       const step = getScrollStep(track);
       track.scrollBy({ left: -step, behavior: "smooth" });

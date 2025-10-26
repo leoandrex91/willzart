@@ -536,6 +536,10 @@ blockquote {
   background-color: #4caf50;
 }
 
+.badge-agotado {
+  background-color: #c71818;
+}
+
 @keyframes pulse {
 
   0%,
@@ -930,4 +934,19 @@ body.loading #preloader {
   background-color: #ffffff !important;
   border-color: #000000 !important;
   color: #000000 !important;
+}
+
+.product-card__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle,
+      rgba(255, 0, 0, 0) 50%,
+      rgba(255, 0, 0, 0.2) 100%);
+  z-index: 2;
+  opacity: 0;
+}
+
+.product-card__media.show-overlay::before {
+  opacity: 1;
 }
