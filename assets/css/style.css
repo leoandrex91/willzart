@@ -417,6 +417,19 @@ blockquote {
   scrollbar-width: none;
 }
 
+.products__track .product-card {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: grab;
+}
+
+.products__track .product-card a {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .products__track::-webkit-scrollbar {
   display: none;
 }
@@ -456,6 +469,11 @@ blockquote {
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: grab;
 }
 
 .product-card:hover .product-card__media img {
@@ -619,7 +637,7 @@ blockquote {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
+  z-index: 5;
   width: 40px;
   height: 40px;
   border-radius: 50%;

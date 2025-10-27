@@ -186,17 +186,19 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="badges-container">
           ${badges}
         </div>
-        <a href="product.html?productid=${encodeURIComponent(p.id)}" class="image-wrapper">
+        
           <div class="${overlay_img}">
             <img src="${images[0] || '/assets/images/no-image.webp'}" alt="${p.name}" class="fade-image" onerror="this.src='/assets/images/no-image.webp';">
           </div>   
-        </a>          
+                
       </div>
+      <a href="product.html?productid=${encodeURIComponent(p.id)}" class="text-decoration-none text-reset">
       <div class="product-card__body">
         ${priceHTML}
         <div class="product-card__name">${p.name}</div>
         <div class="product-card__colors">${colorHTML}</div>
       </div>
+      </a>  
       `;
 
 
@@ -320,6 +322,11 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     );
 
+    // Bloquear el evento dragstart solo en imágenes dentro del carrusel
+    track.querySelectorAll("img").forEach(img => {
+      img.setAttribute("draggable", "false");
+      img.addEventListener("dragstart", e => e.preventDefault());
+    });
 
   }
 
