@@ -545,6 +545,10 @@ blockquote {
   background-color: #4caf50;
 }
 
+.badge-agotado {
+  background-color: #c71818;
+}
+
 .badge-agotado-search {
   background-color: #c71818;
 }
@@ -905,7 +909,7 @@ body.loading #preloader {
   color: #000000 !important;
 }
 
-.product-card__media::before {
+.overlay-agotado::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -916,6 +920,6 @@ body.loading #preloader {
   opacity: 0;
 }
 
-.product-card__media.show-overlay::before {
+.overlay-agotado.show-overlay::before {
   opacity: 1;
 }

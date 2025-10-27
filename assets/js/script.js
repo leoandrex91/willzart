@@ -175,20 +175,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const card = document.createElement("article");
       card.className = "product-card";
-      let overlay_img = `product-card__media`;
+      let overlay_img = `overlay-agotado`;
       if (p.no_stock) {
-        overlay_img = `product-card__media show-overlay`;
+        overlay_img = `overlay-agotado show-overlay`;
       } else {
-        overlay_img = `product-card__media`;
+        overlay_img = `overlay-agotado`;
       };
       card.innerHTML = `
-      <div class="${overlay_img}" aria-label="${p.name}">
+      <div class="product-card__media" aria-label="${p.name}">
         <div class="badges-container">
           ${badges}
         </div>
         <a href="product.html?productid=${encodeURIComponent(p.id)}" class="image-wrapper">
-          <img src="${images[0] || '/assets/images/no-image.webp'}" alt="${p.name}" class="fade-image" onerror="this.src='/assets/images/no-image.webp';">
-        </a>
+          <div class="${overlay_img}">
+            <img src="${images[0] || '/assets/images/no-image.webp'}" alt="${p.name}" class="fade-image" onerror="this.src='/assets/images/no-image.webp';">
+          </div>   
+        </a>          
       </div>
       <div class="product-card__body">
         ${priceHTML}
@@ -248,17 +250,76 @@ document.addEventListener("DOMContentLoaded", () => {
     function getScrollStep(track) {
       const firstCard = track.querySelector(".product-card");
       if (!firstCard) return 340;
-      return firstCard.getBoundingClientRect().width + 18;
+      const gap = parseFloat(getComputedStyle(track).gap) || 18;
+      return firstCard.getBoundingClientRect().width + gap;
     }
 
-    prev.addEventListener("click", () => {
+    function updateNavButtons(track) {
+      const prev = track.parentElement.querySelector(".products__btn--prev");
+      const next = track.parentElement.querySelector(".products__btn--next");
+      const maxScroll = track.scrollWidth - track.clientWidth;
+
+      // Atenuar botones cuando ya no hay más
+      prev.style.opacity = track.scrollLeft <= 10 ? "0.4" : "1";
+      next.style.opacity = track.scrollLeft >= maxScroll - 10 ? "0.4" : "1";
+    }
+
+    let isScrolling = false;
+
+    function smoothScroll(track, direction = 1) {
+      if (isScrolling) return; // evita spam de clicks
+      isScrolling = true;
+
       const step = getScrollStep(track);
-      track.scrollBy({ left: -step, behavior: "smooth" });
+      const target = track.scrollLeft + step * direction;
+
+      track.scrollTo({
+        left: target,
+        behavior: "smooth"
+      });
+
+      setTimeout(() => {
+        isScrolling = false;
+        updateNavButtons(track);
+      }, 450);
+    }
+
+    // 🔹 Agregar eventos a botones
+    prev.addEventListener("click", () => smoothScroll(track, -1));
+    next.addEventListener("click", () => smoothScroll(track, 1));
+
+    // 🔹 Monitorear scroll para actualizar visibilidad de botones
+    track.addEventListener("scroll", () => updateNavButtons(track));
+    updateNavButtons(track);
+
+    // =====================================================
+    // 💡 SOPORTE TÁCTIL (swipe horizontal en móviles)
+    // =====================================================
+    let startX = 0;
+    let scrollLeftStart = 0;
+    let isDown = false;
+
+    track.addEventListener("pointerdown", (e) => {
+      isDown = true;
+      startX = e.pageX;
+      scrollLeftStart = track.scrollLeft;
+      track.style.scrollBehavior = "auto"; // desactiva animación temporal
     });
-    next.addEventListener("click", () => {
-      const step = getScrollStep(track);
-      track.scrollBy({ left: step, behavior: "smooth" });
+
+    track.addEventListener("pointermove", (e) => {
+      if (!isDown) return;
+      const walk = (e.pageX - startX) * 1.2; // velocidad de arrastre
+      track.scrollLeft = scrollLeftStart - walk;
     });
+
+    ["pointerup", "pointerleave"].forEach(evt =>
+      track.addEventListener(evt, () => {
+        isDown = false;
+        track.style.scrollBehavior = "smooth";
+        updateNavButtons(track);
+      })
+    );
+
 
   }
 
